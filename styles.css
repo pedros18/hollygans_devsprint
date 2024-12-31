@@ -47,6 +47,7 @@ img .loook{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 #div1{ 
     width: 744px;
@@ -107,10 +108,11 @@ font-family: "roboto";
 .hero {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    padding-left: 50px;
+    height: 100%;
+    width: 100%;
     background-image: url("./backgroundimage.png");
-    background-repeat: no-repeat;
+    
+    
 }
 
 .text {
@@ -142,7 +144,7 @@ font-size: 13px;
 
 #all{
     padding: 50px;
-    margin-top: -70px;
+    
     
 }
 #Myskills{
@@ -199,7 +201,7 @@ font-size: small;
   .skills .cards { 
     font-family: 'roboto';
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
   
@@ -249,9 +251,10 @@ font-size: small;
   .contact-form {
     font-family: 'roboto';
     width: 100%;
-    max-width: 600px;
+    max-width: 1000px;
     margin: 50px auto;
     text-align: center;
+    align-items: center;
   }
   
   .contact-form h2 {
@@ -259,6 +262,7 @@ font-size: small;
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 10px;
+    
   }
   
   .contact-form h1 {
@@ -266,6 +270,8 @@ font-size: small;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 20px;
+    align-items: center;
+    
   }
   
   form {
@@ -274,19 +280,22 @@ font-size: small;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
   }
   
   .form-group {
     font-family: 'roboto';
-    display: flex;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
   }
   
   .input-group {
     font-family: 'roboto';
-    flex: 1;
-    text-align: left;
+    text-align: center;
+    align-items: center;
   }
   
   label {
@@ -295,17 +304,19 @@ font-size: small;
     color: #333;
     display: block;
     margin-bottom: 5px;
+    
   }
   
   input, select, textarea {
     font-family: 'roboto';
-    width: 100%;
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
     outline: none;
     transition: border-color 0.3s ease;
+    text-align: center;
+    align-items: center;
   }
   
   input:focus, select:focus, textarea:focus {
@@ -442,15 +453,48 @@ color: #ffff;
     margin-top: auto !important;
     margin-bottom: auto !important;
   }
+  .collection{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px; /* Space between items */
+  }
   
   /* Portfolio Section */
-  .allsection {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Three columns of equal width */
-    gap: 24px; /* Space between items */
+  #allsection {
+    display: flex; /* Arrange all #avis items in a row */
+    justify-content: center; /* Center the row horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 24px; /* Space between each #avis element */
     padding: 20px 0;
-    justify-content: center; /* Center the grid container */
   }
+  
+  #avis {
+    background-color: #f5fcff; /* Optional styling for #avis */
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px; /* Set a fixed width for uniformity */
+  }
+  
+  #avis p {
+    margin: 12px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .rows {
+    display: flex; /* Arrange profile and info images in a row */
+    justify-content: center; /* Center the row horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between the images */
+  }
+  
+
+  
+  
+  
+
   
   
   .picture {
@@ -533,7 +577,7 @@ color: #ffff;
     border-right:0;
     border-top: 0;
   }
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 500px) {
     body {
       margin: 10px;
       padding: 0;
@@ -614,5 +658,14 @@ color: #ffff;
       text-align: bottom;
       justify-content: space-around;
     }
+    .hero {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    background-image: url("./backgroundimage.png");
+    
+    
+}
   }
 /*end*/  
